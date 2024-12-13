@@ -45,6 +45,22 @@ A simple tool that compiles and runs Java files with a single command.
    ```
    If the command is not recognized, ensure the PATH is set correctly and try restarting your computer.
 
+### If the Command is Not Recognized Globally
+
+If `jarvis` is not recognized globally even after adding to the PATH, try creating a symbolic link:
+
+1. Open Command Prompt as Administrator.
+
+2. Run the following command to create a link in the global system folder:
+   ```cmd
+   mklink C:\Windows\System32\jarvis.bat C:\scripts\jarvis.bat
+   ```
+
+3. Test the command again:
+   ```cmd
+   jarvis MyApp.java
+   ```
+
 ## Usage
 
 1. Navigate to the folder containing your Java file:
